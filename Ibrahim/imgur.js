@@ -1,33 +1,50 @@
+// 🏺🖼️ The Scroll of Imgurum Uplodus
+// 🔮 Scripted in the Chamber of Codes by High Scribe: Rahl the Wise
+// 📜 Purpose: To lift an image from the mortal realm to the skies of Imgurum
 
 const axios = require('axios');
 const fs = require('fs');
 const FormData = require('form-data');
 
-async function uploadImageToImgur(imagePath, clientId) {
+/**
+ * 📤 Rite of Uplodus: Transfer image to the Cloud Temple (Imgurum)
+ * @param {string} pathOfScroll - 🧾 The sacred path to the image relic
+ * @param {string} sigilOfClient - 🪪 The Imgurum Client-ID scroll
+ * @returns {Promise<string>} - 🔗 The divine link bestowed by Imgurum
+ */
+async function uploadImageToImgur(pathOfScroll, sigilOfClient) {
   try {
-    const data = new FormData();
-    data.append('image', fs.createReadStream(imagePath));
+    // 🧪 Mix the sacred ink
+    const sacredInk = new FormData();
+    sacredInk.append('image', fs.createReadStream(pathOfScroll));
 
-    const headers = {
-      'Authorization': `Client-ID ${clientId}`,
-      ...data.getHeaders()
+    // 📜 Embed the royal seal
+    const royalHeaders = {
+      'Authorization': `Client-ID ${sigilOfClient}`,
+      ...sacredInk.getHeaders()
     };
 
-    const config = {
+    // 🛐 Recite the invocation to the Sky Server
+    const invocation = {
       method: 'post',
       maxBodyLength: Infinity,
       url: 'https://api.imgur.com/3/image',
-      headers: headers,
-      data: data
+      headers: royalHeaders,
+      data: sacredInk
     };
 
-    const response = await axios(config);
-    const imageUrl = response.data.data.link;
-    return imageUrl;
-  } catch (error) {
-    console.error('Erreur lors de l\'envoi sur Imgur:', error);
-    throw new Error('Une erreur est survenue lors de l\'envoi sur Imgur.');
+    // 🧿 Call upon Imgurum
+    const divineReply = await axios(invocation);
+    const heavenlyLink = divineReply.data.data.link;
+
+    console.log('📯 By the Order of Rahl, the image ascends! 📸🔗', heavenlyLink);
+    return heavenlyLink;
+
+  } catch (curse) {
+    console.error('🕳️ A curse has befallen the Rite of Uplodus:', curse);
+    throw new Error('🧛 Alas! The sacred rite has failed to reach Imgurum.');
   }
 }
 
+// 🏺 Expose this scroll to other Scribes
 module.exports = { uploadImageToImgur };
