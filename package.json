@@ -1,32 +1,32 @@
 {
-  "name": "Bwmxmd",
-  "version": "2.1.0",
-  "description": "Advanced WhatsApp bot using Baileys",
-  "main": "index.js",
-  "type": "commonjs",
-  "engines": {
-    "node": "20.19.2",
-    "npm": "10.8.2"
+  "🪄 name": "👑 Rahlxmd",
+  "📦 version": "2.1.0",
+  "📜 description": "🔱 Advanced WhatsApp bot using Baileys",
+  "🎯 main": "index.js",
+  "🏛️ type": "commonjs",
+  "⚙️ engines": {
+    "🦁 node": "20.19.2",
+    "💎 npm": "10.8.2"
   },
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "node index.js",
-    "c": "tsc",
-    "pm2-start": "pm2 start index.js --attach",
-    "xmd": "pm2 start index.js --attach"
+  "🎬 scripts": {
+    "🟢 start": "node index.js",
+    "⚙️ dev": "nodemon index.js",
+    "🧪 test": "node index.js",
+    "👷‍♂️ c": "tsc",
+    "👑 pm2-start": "pm2 start index.js --attach",
+    "🚀 xmd": "pm2 start index.js --attach"
   },
-  "keywords": [
-    "bot",
-    "Baileys",
-    "bmwxmd",
-    "quantum",
-    "whatsapp-bot",
-    "Ibrahim-Adams"
+  "🔍 keywords": [
+    "🤖 bot",
+    "💬 Baileys",
+    "🛡️ rahlxmd",
+    "🌌 quantum",
+    "📲 whatsapp-bot",
+    "🧠 Rahl"
   ],
-  "author": "Ibrahim Adams",
-  "license": "ISC",
-  "dependencies": {
+  "👤 author": "👨‍💻 Rahl",
+  "📜 license": "ISC",
+  "🔗 dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
     "@hapi/boom": "^10.0.1",
     "@types/node": "^18.0.6",
@@ -134,4 +134,4 @@
     "wa-sticker-formatter": "^4.4.4",
     "wikipedia": "^2.1.2"
   }
-}
+  }
